@@ -33,14 +33,13 @@
 <li><a href="index.html">Accueil</a></li>
 <li><a href="programme.html">Programme</a></li>
 <li><a href="intervenants.html">Intervenants</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
 </ul>
-
-<button id="theme-toggle">
+<button id="theme-toggle" aria-label="Changer de thème">
 <i class="bi bi-moon-fill"></i>
 </button>
 
-<button id="menu-toggle">
+<button id="menu-toggle" aria-label="Ouvrir le menu">
 <i class="bi bi-list"></i>
 </button>
 
@@ -58,11 +57,20 @@ Une question sur AfriConnect Summit 2026 ?
 Notre équipe est à votre disposition.
 </p>
 
-<p>
-Accueil > Contact
-</p>
+<div class="breadcrumb">
+    <a href="index.html">
+        <i class="bi bi-house-door-fill"></i> Accueil
+    </a>
+
+    <span>
+        <i class="bi bi-chevron-right"></i>
+    </span>
+
+    <span>Contact</span>
+</div>
 
 </section>
+
 <section id="infos-contact">
 
 <h2>Nos coordonnées</h2>
@@ -104,38 +112,109 @@ Accueil > Contact
 </section>
 <section id="contact-form">
 
-<h2>Envoyez-nous un message</h2>
+    <h2>Inscription au sommet</h2>
 
-<form>
+    <div class="contact-container">
 
-<label>Nom</label>
-<input type="text" placeholder="Votre nom">
+        <div class="formulaire">
 
-<label>Email</label>
-<input type="email" placeholder="Votre adresse email">
+            <form id="registrationForm">
 
-<label>Sujet</label>
-<input type="text" placeholder="Sujet">
+                <label for="nom">Nom complet *</label>
+                <input type="text" id="nom" name="nom" required>
+                <small class="error"></small>
 
-<label>Message</label>
-<textarea rows="6" placeholder="Votre message"></textarea>
+                <label for="email">Adresse email *</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error"></small>
 
-<button type="submit">
-Envoyer
-</button>
+                <label for="telephone">Téléphone *</label>
+                <input type="tel" id="telephone" name="telephone" required>
+                <small class="error"></small>
+
+                <label for="participation">Type de participation *</label>
+
+                <select id="participation" name="participation" required>
+                    <option value="">Choisir...</option>
+                    <option>Participant</option>
+                    <option>Intervenant</option>
+                    <option>Partenaire</option>
+                    <option>Presse</option>
+                </select>
+
+                <small class="error"></small>
+
+                <label for="pays">Pays *</label>
+
+                <select id="pays" name="pays" required>
+                    <option value="">Choisir un pays</option>
+                    <option>Sénégal</option>
+                    <option>Mauritanie</option>
+                    <option>Mali</option>
+                    <option>Maroc</option>
+                    <option>Algérie</option>
+                    <option>Tunisie</option>
+                    <option>Ghana</option>
+                    <option>Nigeria</option>
+                    <option>Côte d'Ivoire</option>
+                    <option>Burkina Faso</option>
+                </select>
+
+                <small class="error"></small>
+
+                <label for="message">Motivation *</label>
+
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <small class="error"></small>
+
+                <button type="submit">
+                    Envoyer l'inscription
+                </button>
+
+                <p id="successMessage"></p>
+
 
 </form>
 
-</section>
-<section id="map">
+</div>
 
-<h2>Lieu de l'événement</h2>
+<div class="infos">
 
-<div class="map-placeholder">
+<h3>Informations</h3>
 
-<p>📍 Carte Google Maps (à intégrer au Commit JavaScript)</p>
+<p><i class="bi bi-calendar-event"></i> 15 au 17 Novembre 2026</p>
+
+<p><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</p>
+
+<p><i class="bi bi-people-fill"></i> Plus de 1200 participants</p>
+
+<p><i class="bi bi-envelope-fill"></i> contact@africonnectsummit.com</p>
+
+<p><i class="bi bi-telephone-fill"></i> +221 77 123 45 67</p>
+
+</div> 
 
 </div>
+
+</section> 
+
+<section id="map">
+
+    <h2>Nous trouver</h2>
+
+    <div class="map-container">
+
+        <iframe
+    src="https://www.google.com/maps?q=Dakar,Senegal&output=embed"
+    width="100%"
+    height="450"
+    style="border:0;"
+    loading="lazy"
+    allowfullscreen>
+</iframe>
+
+    </div>
 
 </section>
 <section id="faq">
@@ -175,7 +254,7 @@ Oui, un certificat de participation sera délivré.
 </section>
 <footer>
 
-    <div class="footer-container"
+    <div class="footer-container">
         <div class="footer-column">
             <h3>AfriConnect Summit 2026</h3>
             <p>

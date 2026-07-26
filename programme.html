@@ -28,7 +28,13 @@
 
 <ul>
 <li><a href="index.html">Accueil</a></li>
-<li><a href="programme.html">Programme</a></li>
+<li>
+    <a href="programme.html"
+       class="active"
+       aria-current="page">
+       Programme
+    </a>
+</li>
 <li><a href="intervenants.html">Intervenants</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
@@ -56,13 +62,21 @@ Découvrez les conférences, ateliers et tables rondes
 des trois journées du sommet.
 </p>
 
-<p>
-Accueil > Programme
-</p>
+<div class="breadcrumb">
+    <a href="index.html">
+        <i class="bi bi-house-door-fill"></i>
+        Accueil
+    </a>
 
-</section>
+    <span>
+        <i class="bi bi-chevron-right"></i>
+    </span>
 
-<section id="programme">
+    <span>Programme</span>
+</div>
+
+
+    <div class="container">
 
 <h2>Programme des trois journées</h2>
 
@@ -75,6 +89,10 @@ Accueil > Programme
 <button class="tab">Jour 3</button>
 
 </div>
+
+<!-- =======================
+     JOUR 1
+======================== -->
 
 <div class="tab-content active" id="jour1">
 
@@ -99,31 +117,31 @@ Accueil > Programme
 </tr>
 
 <tr>
-<td>10:00</td>
-<td>L'avenir de l'IA en Afrique</td>
+<td>09:30</td>
+<td><i class="bi bi-mic-fill"></i> Conférence d'ouverture</td>
 <td>Amina Diallo</td>
-<td>Salle Tech</td>
+<td>Auditorium A</td>
 </tr>
 
 <tr>
-<td>11:30</td>
-<td>Créer une Startup</td>
-<td>Samuel Mensah</td>
-<td>Salle Business</td>
+<td>10:30</td>
+<td><i class="bi bi-cup-hot-fill"></i> Pause Café</td>
+<td>-</td>
+<td>Espace Café</td>
 </tr>
 
 <tr>
-<td>14:00</td>
-<td>Cybersécurité moderne</td>
-<td>Patrick Koffi</td>
-<td>Salle Innovation</td>
+<td>12:30</td>
+<td><i class="bi bi-egg-fried"></i> Déjeuner</td>
+<td>-</td>
+<td>Restaurant</td>
 </tr>
 
 <tr>
-<td>16:00</td>
-<td>Networking</td>
+<td>15:00</td>
+<td><i class="bi bi-people-fill"></i> Networking</td>
 <td>Tous les participants</td>
-<td>Espace Lounge</td>
+<td>Hall Principal</td>
 </tr>
 
 </tbody>
@@ -131,6 +149,10 @@ Accueil > Programme
 </table>
 
 </div>
+
+<!-- =======================
+     JOUR 2
+======================== -->
 
 <div class="tab-content" id="jour2">
 
@@ -149,35 +171,35 @@ Accueil > Programme
 
 <tr>
 <td>09:00</td>
-<td>Développement Web 2026</td>
+<td><i class="bi bi-code-slash"></i> Développement Web 2026</td>
 <td>Grace Niyonsaba</td>
 <td>Salle Tech</td>
 </tr>
 
 <tr>
 <td>10:30</td>
-<td>Cloud Computing</td>
+<td><i class="bi bi-cloud-fill"></i> Cloud Computing</td>
 <td>Jean Mendy</td>
 <td>Auditorium A</td>
 </tr>
 
 <tr>
 <td>12:00</td>
-<td>Design UX/UI</td>
+<td><i class="bi bi-palette-fill"></i> Design UX/UI</td>
 <td>Grace Niyonsaba</td>
 <td>Salle Design</td>
 </tr>
 
 <tr>
 <td>14:00</td>
-<td>Blockchain</td>
+<td><i class="bi bi-currency-bitcoin"></i> Blockchain</td>
 <td>Fatou Ndiaye</td>
 <td>Salle Innovation</td>
 </tr>
 
 <tr>
 <td>16:30</td>
-<td>Table ronde</td>
+<td><i class="bi bi-chat-square-text-fill"></i> Table ronde</td>
 <td>Experts invités</td>
 <td>Auditorium A</td>
 </tr>
@@ -188,6 +210,10 @@ Accueil > Programme
 
 </div>
 
+
+<!-- =======================
+     JOUR 3
+======================== -->
 
 <div class="tab-content" id="jour3">
 
@@ -206,35 +232,35 @@ Accueil > Programme
 
 <tr>
 <td>09:00</td>
-<td>Big Data</td>
+<td><i class="bi bi-bar-chart-fill"></i> Big Data</td>
 <td>Patrick Koffi</td>
 <td>Salle Data</td>
 </tr>
 
 <tr>
 <td>10:30</td>
-<td>Financement des Startups</td>
+<td><i class="bi bi-briefcase-fill"></i> Financement des Startups</td>
 <td>Samuel Mensah</td>
 <td>Salle Business</td>
 </tr>
 
 <tr>
 <td>12:00</td>
-<td>Entrepreneuriat numérique</td>
+<td><i class="bi bi-lightbulb-fill"></i> Entrepreneuriat numérique</td>
 <td>Amina Diallo</td>
 <td>Auditorium A</td>
 </tr>
 
 <tr>
 <td>14:00</td>
-<td>Remise des prix</td>
+<td><i class="bi bi-award-fill"></i> Remise des prix</td>
 <td>Organisation</td>
 <td>Grande Salle</td>
 </tr>
 
 <tr>
 <td>16:00</td>
-<td>Clôture officielle</td>
+<td><i class="bi bi-flag-fill"></i> Clôture officielle</td>
 <td>Direction AfriConnect</td>
 <td>Auditorium A</td>
 </tr>
@@ -243,14 +269,16 @@ Accueil > Programme
 
 </table>
 
-</div>
+</div> <!-- Fin Jour 3 -->
 
-</section>
+</div> <!-- Fin .container -->
 
-
+</section> <!-- Fin #hero-programme -->
+ 
 <section id="themes">
 
 <h2>Les grandes thématiques</h2>
+
 
 <div class="themes-container">
 

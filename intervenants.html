@@ -31,18 +31,17 @@
 
 <ul>
 
-<li><a href="index.html">Accueil</a></li>
-<li><a href="programme.html">Programme</a></li>
-<li><a href="intervenants.html">Intervenants</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="index.html" aria-current="page">Accueil</a></li>
+<li><a href="programme.html" aria-current="page">Programme</a></li>
+<li><a href="intervenants.html" class="active" aria-current="page">Intervenants</a></li>
+<li><a href="contact.html" aria-current="page">Contact</a></li>
 
 </ul>
-
-<button id="theme-toggle">
+<button id="theme-toggle" aria-label="Changer de thème">
 <i class="bi bi-moon-fill"></i>
 </button>
 
-<button id="menu-toggle">
+<button id="menu-toggle" aria-label="Ouvrir le menu">
 <i class="bi bi-list"></i>
 </button>
 
@@ -60,26 +59,32 @@ Découvrez les experts qui partageront leur expérience
 durant AfriConnect Summit 2026.
 </p>
 
-<p>
-Accueil > Intervenants
-</p>
-
+<div class="breadcrumb">
+    <a href="index.html">
+        <i class="bi bi-house-door-fill"></i> Accueil
+    </a>
+    <span>
+        <i class="bi bi-chevron-right"></i>
+    </span>
+    <span>Intervenants</span>
+</div>
 </section>
 <section id="filters">
 
 <h2>Filtrer par domaine</h2>
 
+<p>
+Sélectionnez une catégorie pour découvrir les experts présents au sommet.
+</p>
+
+
 <div class="filter-buttons">
 
-<button>Tous</button>
-
-<button>IA & Tech</button>
-
-<button>Business</button>
-
-<button>Design</button>
-
-<button>Data</button>
+<button data-filter="all" class="active">Tous</button>
+<button data-filter="ia">IA & Tech</button>
+<button data-filter="business">Business</button>
+<button data-filter="design">Design</button>
+<button data-filter="data">Data</button>
 
 </div>
 
@@ -87,73 +92,96 @@ Accueil > Intervenants
 
 <section id="speakers">
 
-<div class="speakers-grid">
+<div class="container">
+
+<div class="speakers-container">
 
 <article class="speaker-card" data-category="ia">
-<img src="images/intervenant1.jpg" alt="Amina Diallo">
-<h3>Amina Diallo</h3>
-<p>Experte en Intelligence Artificielle</p>
-<span>Sénégal 🇸🇳</span>
+    <img src="images/intervenant1.jpg" alt="Amina Diallo">
+
+    <div class="speaker-content">
+        <h3>Amina Diallo</h3>
+        <p>Experte en Intelligence Artificielle</p>
+        <span>Sénégal 🇸🇳</span>
+    </div>
 </article>
 
 <article class="speaker-card" data-category="business">
 <img src="images/intervenant2.jpg" alt="Samuel Mensah">
-<h3>Samuel Mensah</h3>
-<p>Entrepreneur Tech</p>
-<span>Ghana 🇬🇭</span>
+
+<div class="speaker-content">
+    <h3>Samuel Mensah</h3>
+    <p>Entrepreneur Tech</p>
+    <span>Ghana 🇬🇭</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="design">
 <img src="images/intervenant3.jpg" alt="Grace Niyonsaba">
-<h3>Grace Niyonsaba</h3>
-<p>UX/UI Designer</p>
-<span>Rwanda 🇷🇼</span>
+
+<div class="speaker-content">
+    <h3>Grace Niyonsaba</h3>
+    <p>UX/UI Designer</p>
+    <span>Rwanda 🇷🇼</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="data">
 <img src="images/intervenant4.jpg" alt="Patrick Koffi">
-<h3>Patrick Koffi</h3>
-<p>Data Scientist</p>
-<span>Côte d'Ivoire 🇨🇮</span>
+
+<div class="speaker-content">
+    <h3>Patrick Koffi</h3>
+    <p>Data Scientist</p>
+    <span>Côte d'Ivoire 🇨🇮</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="ia">
 <img src="images/intervenant5.jpg" alt="Fatou Ndiaye">
-<h3>Fatou Ndiaye</h3>
-<p>Ingénieure Machine Learning</p>
-<span>Sénégal 🇸🇳</span>
+<div class="speaker-content">
+    <h3>Fatou Ndiaye</h3>
+    <p>Ingénieure Machine Learning</p>
+    <span>Sénégal 🇸🇳</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="business">
 <img src="images/intervenant6.jpg" alt="Jean Mendy">
-<h3>Jean Mendy</h3>
-<p>Consultant Innovation</p>
-<span>Mali 🇲🇱</span>
+<div class="speaker-content">
+    <h3>Jean Mendy</h3>
+    <p>Consultant Innovation</p>
+    <span>Mali 🇲🇱</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="design">
 <img src="images/intervenant7.jpg" alt="Linda Okoro">
-<h3>Linda Okoro</h3>
-<p>Product Designer</p>
-<span>Nigeria 🇳🇬</span>
+<div class="speaker-content">
+    <h3>Linda Okoro</h3>
+    <p>Product Designer</p>
+    <span>Nigeria 🇳🇬</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="data">
 <img src="images/intervenant8.jpg" alt="David Kabore">
-<h3>David Kabore</h3>
-<p>Analyste Big Data</p>
-<span>Burkina Faso 🇧🇫</span>
+<div class="speaker-content">
+    <h3>David Kabore</h3>
+    <p>Analyste Big Data</p>
+    <span>Burkina Faso 🇧🇫</span>
+</div>
 </article>
 
 <article class="speaker-card" data-category="ia">
 <img src="images/intervenant9.jpg" alt="Eric Banza">
-<h3>Eric Banza</h3>
-<p>Architecte Cloud</p>
-<span>RDC 🇨🇩</span>
-</article>
-
+<div class="speaker-content">
+    <h3>Eric Banza</h3>
+    <p>Architecte Cloud</p>
+    <span>RDC 🇨🇩</span>
 </div>
-
+</article>
+</div>
+</div>
 </section>
 <footer>
 
