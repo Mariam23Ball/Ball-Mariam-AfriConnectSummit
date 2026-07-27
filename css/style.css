@@ -841,9 +841,9 @@ body.dark-mode .tab.active{
 }
 
 
-/* ============================
+/* 
    HERO ACCUEIL
-============================ */
+ */
 
 .hero{
     min-height:calc(100vh - 80px);
@@ -962,6 +962,15 @@ body.dark-mode .tab.active{
         var(--secondary-color)
     );
     color:white;
+    
+}
+.tab{
+    letter-spacing:0.5px;
+    font-size:1rem;
+}
+
+.tab.active{
+    box-shadow:0 8px 20px rgba(37,99,235,.30);
 }
 
 /* TABLE */
@@ -998,6 +1007,14 @@ tbody tr{
 
 tbody tr:hover{
     background:#f4f9ff;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fafc;
+}
+
+tbody td{
+    vertical-align:middle;
 }
 
 .program-table{
@@ -1408,3 +1425,37 @@ body.dark-mode #menu-toggle{
     color:white;
 }
 
+.tab-content.active{
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+table i{
+    color:var(--primary-color);
+    margin-right:8px;
+}
+
+@media(max-width:768px){
+
+    .tabs{
+        gap:12px;
+    }
+
+    .tab{
+        width:100%;
+    }
+
+}
