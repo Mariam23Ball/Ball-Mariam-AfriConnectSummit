@@ -233,6 +233,30 @@ nav ul li a.active{
 
 }
 
+.filter-buttons button{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:var(--white);
+    color:var(--dark);
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:all .3s ease;
+}
+
+.filter-buttons button:hover{
+    transform:translateY(-3px);
+}
+
+.filter-buttons button.active{
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color:white;
+}
 
 /*BREADCRUMB*/
 
@@ -1107,11 +1131,13 @@ tbody td{
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,.10);
     transition: all .4s ease;
+    border:1px solid rgba(0,0,0,.05);
 }
 
 .speaker-card:hover{
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    border-color:var(--primary-color);
 }
 
 .speaker-card img{
@@ -1141,7 +1167,13 @@ tbody td{
     margin-bottom:12px;
 }
 
+.speaker-card:hover span{
+    background:var(--primary-color);
+    color:white;
+}
+
 .speaker-content span{
+    transition:.3s;
     display:inline-block;
     background:#eef4ff;
     color:var(--primary-color);
@@ -1235,13 +1267,6 @@ tbody tr{
 .program-table tbody tr:hover{
     transform:scale(1.01);
 }
-
-
-
-.speaker-card{
-    transition:0.4s ease;
-}
-
 .speaker-card.hide{
     opacity:0;
     transform:scale(0.9);
@@ -1250,9 +1275,24 @@ tbody tr{
 }
 
 .speaker-card.show{
+    display:block;
     opacity:1;
     transform:scale(1);
-    display:block;
+    animation:fadeSpeaker .5s ease;
+}
+
+@keyframes fadeSpeaker{
+
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
 }
 
 .program-table td i{
@@ -1458,4 +1498,11 @@ table i{
         width:100%;
     }
 
+}
+
+.speaker-note{
+    text-align:center;
+    font-weight:600;
+    margin-top:15px;
+    color:#dbeafe;
 }
