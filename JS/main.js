@@ -66,11 +66,11 @@ if(backToTop){
     window.addEventListener("scroll", ()=>{
 // veux dire que si la position de défilement est supérieure à 300 pixels, alors on affiche le bouton "Retour en haut"
         if(window.scrollY > 300){
-            backToTop.style.display="flex";
+            backToTop.classList.add("show");
             // backToTop.style.display="flex"; veut dire que l'on affiche le bouton "Retour en haut" en utilisant la propriété CSS "display" avec la valeur "flex"
         }else{
             // backToTop.style.display="none"; veut dire que l'on cache le bouton "Retour en haut" en utilisant la propriété CSS "display" avec la valeur "none"
-            backToTop.style.display="none";
+            backToTop.classList.remove("show");
         }
 
     });
